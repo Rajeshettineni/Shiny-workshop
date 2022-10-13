@@ -3,17 +3,17 @@ library(ggplot2)
 server <- function(input, output, session) {
   v <- reactiveValues(
     var_label = NA,
-    input_variable = NA
+    var = NA
   )
   
   observeEvent(input$show, {
-    v$input_variable <- input$variable
-    v$var_label <- gsub(".", " ", v$input_variable, fixed = TRUE)
+    v$var <- input$variable
+    v$var_label <- gsub(".", " ", v$var, fixed = TRUE)
   })
 
   output$plot <- renderPlot({
-    req(v$input_variable)
-    ggplot(iris, aes_string("Species", v$input_variable)) +
+    req(v$var)
+    ggplot(iris, aes_string("Species", v$var)) +
       geom_boxplot(fill = "royalblue") +
       theme_classic() + 
       theme(axis.text = element_text(size = 15),
