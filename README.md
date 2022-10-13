@@ -22,3 +22,4 @@ install.packages("ggplot2")
 - [Advanced R](https://adv-r.hadley.nz/)
 - [Shiny apps gallery](https://demo.appsilon.com/)
 - My talk on ['How to become an R Shiny developer'](https://youtu.be/EDhhbG_N6bo)
+- [Intro to Shiny workshops](https://youtu.be/P7T5haMRYwk) that uses the same example apps, but shows other concepts
